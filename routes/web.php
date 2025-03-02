@@ -1,5 +1,8 @@
 <?php
 
+use App\Http\Controllers\ArisanController;
+use App\Http\Controllers\AuthController;
+use App\Http\Controllers\PaymentController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -13,6 +16,25 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+// Route::middleware(['auth:sanctum', 'role:admin'])->group(function () {
+//     Route::post('/arisans', [ArisanController::class, 'store']);
+// });
+
+// Route::get('/', function () {
+//     return view('app');
+// });
+
+
+// Route::post('/login', [AuthController::class, 'login']);
+
+
+// Route::middleware('auth::sanctum')->group(function () {
+//     Route::post('/arisans', [ArisanController::class], 'store');
+//     Route::post('/arisans/{id}/members', [ArisanController::class], 'addMember');
+//     Route::post('/payments', [PaymentController::class], 'store');
+//     Route::post('/payments/{id}/validate', [PaymentController::class], 'store');
+// });
+
+// Route::middleware(['auth:sanctum', 'role:admin'])->group(function () {
+//     Route::post('/arisans', [ArisanController::class, 'store']);
+// });
